@@ -1,0 +1,14 @@
+@import "bourbon/bourbon";
+@import "_grid-settings";
+@import "neat/neat";
+@import "recipe-search";
+@import "snippet";
+@import "new-recipe";
+
+html {
+	background-color: #a5aad9;
+	font-family: 'Open Sans', sans-serif;
+}
+li {
+	list-style:none;
+}

@@ -1,0 +1,47 @@
+.new-recipe{
+	background-color: white;
+	border-radius:10px;
+	@include span-columns(10);
+
+	.new-recipe-info{
+		@include span-columns(4);
+		@include shift(2);
+		display:inline-block;
+		padding-top:20px;
+		input {
+			font-size:1.5em;
+			border: none;
+			border-bottom: 2px solid #a5aad9;
+			width: 12em;
+			line-height: 200%;
+			display: inline-block;
+		}
+	}
+	input:focus {
+		outline: none;
+	}
+	.new-recipe-checkbox{
+		@include span-columns(2);
+		display: inline-block;
+		padding-top:20px;
+		input{
+			display:inline-block;
+			vertical-align:middle;
+		}
+		label{
+			line-height:200%;
+			vertical-align:middle;
+
+		}
+	}
+	.new-recipe-steps{
+		@include span-columns(8);
+
+		input {
+			border:none;
+			font-size:1.5em;
+			border-bottom: 2px solid #a5aad9;
+			margin: 10px;
+		}
+	}
+}

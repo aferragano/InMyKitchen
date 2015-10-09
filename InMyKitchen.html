@@ -1,14 +1,12 @@
 <head>
   <title>InMyKitchen</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
+<body ng-app="simple-recipes"
+      ng-include="'recipe-list.ng.html'"
+      ng-controller="RecipesListCtrl">
+      
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
+

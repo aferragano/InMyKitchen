@@ -18,3 +18,8 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
+urigo:angular
+wolves:bourbon
+wolves:neat
+wolves:bitters
+fourseven:scss@=3.2.0

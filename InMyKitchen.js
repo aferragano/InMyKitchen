@@ -1,19 +1,40 @@
+Recipes = new Mongo.Collection('recipes');
+
 if (Meteor.isClient) {
-  // counter starts at 0
-  Session.setDefault('counter', 0);
+  
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
-    }
-  });
 
-  Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
+
+  angular.module('simple-recipes',['angular-meteor']);
+
+  angular.module('simple-recipes').controller('RecipesListCtrl', ['$scope', '$meteor', 
+    function ($scope, $meteor) {
+      $scope.recipes = $meteor.collection(function(){
+        return Recipes.find({}, { sort: { createdAt: -1 } 
+      })
+    });
+
+    $scope.addRecipe = function(newRecipe) {
+      $scope.recipes.push( {
+        name: newRecipe.name,
+        time: newRecipe.time,
+        rating: newRecipe.rating,
+        difficulty: newRecipe.difficulty,
+        ingredients: newRecipe.ingredients,
+        directions: newRecipe.directions,
+        chefname: newRecipe.chefname,
+        createdAt: new Date() 
+      });
+    };
+    $scope.hideIngredient = function() {
+      $("#ingredient-submit").hide();
     }
-  });
+
+
+  }]);
+
+
+
 }
 
 if (Meteor.isServer) {

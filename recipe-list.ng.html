@@ -1,0 +1,72 @@
+<div class="container">
+	<header>
+		<div class="search-container">
+			<h1>search for </h1>
+				<select>
+				  <option value="appetizer">appetizer</option>
+				  <option value="entree">entree</option>
+				  <option value="dessert">sider</option>
+				  <option value="beverage">beverage</option>
+				  <option value="dessert">dessert</option>
+				  <option value="everything">everything</option>
+				</select> 
+				<h1>including</h1> 
+				<input/>
+				<button class="add-button">+</button>
+				<button class="add-button">search</button>
+		</div>
+	</header>
+	<div>
+
+		<ul>
+			<li ng-repeat="recipe in recipes">
+				<div class="recipe-snippet" >
+					<div class="recipe-image">image!
+					</div>
+
+					<div class="snippet-info">
+						<h3>{{recipe.name}}</h3>
+						{{recipe.time}} <br>
+						{{recipe.rating}} <br>
+						{{recipe.difficulty}} <br>
+					</div>
+					<div class="snippet-ingredients">
+						{{recipe.ingredients}} <br> 
+						{{recipe.chefname}} <br>
+					</div>
+				</div>
+				<div class="snippet-options">
+				<a href="" class="add-to-recipe-book">add to my recipe book</a>
+				<a href="" class="add-to-menu">add to menu</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+		<form class="new-recipe" ng-submit="addRecipe(newRecipe); newRecipe='';">
+			<div class="new-recipe-info">
+				<input ng-model="newRecipe.name" type="text" name="name" placeholder="new recipe name"/><br>
+				<input ng-model="newRecipe.time" type="text" name="time" placeholder="new recipe time"/><br>
+				<input ng-model="newRecipe.rating" type="text" name="rating" placeholder="new recipe rating"/><br>
+				<input ng-model="newRecipe.difficulty" type="text" name="difficulty" placeholder="new recipe difficulty"/><br>
+			</div>
+			<div class="new-recipe-checkbox">
+				<input type="checkbox" id="" name="cc" />
+				<label for="">Dairy free</label><br>
+				<input type="checkbox" id="" name="cc" />
+				<label for="">Vegetarian</label><br>
+				<input type="checkbox" id="" name="cc" />
+				<label for="">Nut free</label><br>
+				<input type="checkbox" id="" name="cc" />
+				<label for="">Gluten free</label><br>
+			</div>
+
+			<div class="new-recipe-steps">
+				<input id="ingredient-submit" placeholder="new">
+				<input ng-model="newRecipe.ingredients" type="text" name="ingredients" placeholder="new recipe ingredients"/><br>
+				<input ng-model="newRecipe.directions" type="text" name="directions" placeholder="new recipe directions"/><br>
+				<input ng-model="newRecipe.chefname" type="text" name="chefname" placeholder="new recipe chefname"/><br>
+				<input type="submit" id="submit" value="Submit" />
+			</div>
+
+		</form>
+</div>
