@@ -1,7 +1,7 @@
 Recipes = new Mongo.Collection('recipes');
 
 if (Meteor.isClient) {
-  
+
 
 
 
@@ -26,15 +26,7 @@ if (Meteor.isClient) {
         createdAt: new Date() 
       });
     };
-    $scope.hideIngredient = function() {
-      $("#ingredient-submit").hide();
-    }
-
-
   }]);
-
-
-
 }
 
 if (Meteor.isServer) {

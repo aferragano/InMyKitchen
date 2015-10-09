@@ -31,17 +31,37 @@
 		label{
 			line-height:200%;
 			vertical-align:middle;
-
 		}
 	}
 	.new-recipe-steps{
+		margin-top:15px;
 		@include span-columns(8);
+		@include shift(1);
 
 		input {
 			border:none;
 			font-size:1.5em;
 			border-bottom: 2px solid #a5aad9;
+			@include span-columns(4);
 			margin: 10px;
+			margin-top: 3.5em;
+			line-height: 250%;
+
 		}
+	}
+	.new-recipe-submit {
+		background-color: #a5aad9;
+		color: white;
+		border-radius: 5px;
+	}
+	.new-ingredient-box, .new-step-box{
+		margin-bottom: 90px;
+		display: inline-block;
+		height:10em;
+		@include span-columns(4);
+		background-color:  #a5aad9;
+		border-radius: 10px;
+		
+		vertical-align: text-bottom;
 	}
 }

@@ -61,11 +61,14 @@
 			</div>
 
 			<div class="new-recipe-steps">
-				<input id="ingredient-submit" placeholder="new">
-				<input ng-model="newRecipe.ingredients" type="text" name="ingredients" placeholder="new recipe ingredients"/><br>
-				<input ng-model="newRecipe.directions" type="text" name="directions" placeholder="new recipe directions"/><br>
-				<input ng-model="newRecipe.chefname" type="text" name="chefname" placeholder="new recipe chefname"/><br>
-				<input type="submit" id="submit" value="Submit" />
+				<input ng-model="newRecipe.ingredients" type="text" name="ingredients" placeholder="new recipe ingredients"/>
+				<div class="new-ingredient-box"></div>
+				<br>
+				<input ng-model="newRecipe.directions" type="text" name="directions" placeholder="new recipe directions"/>
+				<div class="new-step-box"></div>
+				<br>
+				<input ng-model="newRecipe.chefname" type="text" name="chefname" placeholder="chef name"/><br>
+				<input class="new-recipe-submit" type="submit" id="submit" value="Submit" />
 			</div>
 
 		</form>
